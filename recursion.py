@@ -1,5 +1,4 @@
 count = 0
-
 def Counter():
     global count
     if count == 10:
@@ -50,5 +49,41 @@ def backtrack(i, n):
 
 backtrack(1, 5)
 
+# Sum first N numbers
+sum = 0
+def Sum(n):
+    global sum
+    if n == 0:
+        return print(sum)
+    sum += n
+    return Sum(n - 1)
+Sum(10)
+
+# factorial
+
+def factorial(n):
+    if n == 1:
+        return 1
+    return factorial(n-1) * n
+print(factorial(3))
+
+# Reverse An Array
+def reverse(arr,l,r):
+    if l >= r:
+        return 
+    arr[l], arr[r] = arr[r], arr[l]
+    return reverse(arr, l+1, r-1)
+array = [1,2,3,4,5,6]
+reverse(array,0,len(array)- 1)
+print(array)
+        
+# Fibonacci numbers
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+print(fibonacci(3))
+
+    
 
 
